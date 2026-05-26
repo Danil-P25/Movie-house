@@ -1,13 +1,12 @@
+import SearchIcon from "../../UI/Icon/SearchIcon"
+import styles from "./Search.module.css"
+
 function Search () {
 return (
-  <button>
-    <img
-      src="/images/Vector.svg"
-      alt="Поиск"
-      style={{ opacity: 0.5 }}
-      />
-    <p>Поиск</p>
-  </button>
+    <button className={styles.buttonActions}>
+      <SearchIcon />
+      <p>Поиск</p>
+    </button>
 )
 }
 export default Search

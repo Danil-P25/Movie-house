@@ -1,0 +1,32 @@
+.promoTitle {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 120%;
+}
+
+.promoInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  z-index: 1;
+}
+
+.promoButton {
+  display: block;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 18px 22px;
+  color: white;
+  background-color: red;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.promoButton:hover {
+  transform: scale(1.1);
+}
+
+.promoButton:active {
+  transform: scale(0.95);
+}

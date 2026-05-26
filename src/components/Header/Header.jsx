@@ -1,8 +1,8 @@
 import Logo from "../UI/Logo/Logo"
-import Menu from "../UI/Menu/Menu"
 import Profile from "./Profile/Profile"
 import Search from "./Search/Search"
 import styles from "./Header.module.css"
+import Menu from "../Menu/Menu"
 
 
 function Header () {
@@ -10,10 +10,14 @@ function Header () {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Logo />
-        <Menu />
-        <Search />
-        <Profile />
+        <div className={styles.brandNav}>
+          <Logo />
+          <Menu />
+        </div>
+        <div className={styles.headerActions}>
+          <Search />
+          <Profile />
+        </div>
       </div>
     </header>
   )

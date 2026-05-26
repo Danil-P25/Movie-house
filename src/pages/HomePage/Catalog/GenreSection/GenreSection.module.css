@@ -1,0 +1,68 @@
+.boxGenre {
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.boxGenre h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 0 0 10px #7c7c7c, 0 0 20px #6f6868;
+}
+
+.catalogList {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.catalogList li {
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.catalogList li:hover {
+  transform: scale(1.05);
+}
+
+.imgCatalog {
+  width: clamp(240px, 20.5vw, 330px);
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.catalogContent {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 2px 0;
+  flex-wrap: nowrap;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.catalogList li h4 {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: clamp(200px, 20.5vw, 330px);
+}
+
+.catalogContent span {
+  white-space: nowrap;
+}
+
+.catalogContent span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 140px;
+}
+
+.catalogContent span:first-child {
+  color: red;
+}

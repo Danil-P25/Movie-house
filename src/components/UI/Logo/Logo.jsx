@@ -2,7 +2,7 @@ function Logo () {
 
   return (
     <>
-      <p style={{
+      <a href="#" style={{
         color: 'white',
         fontWeight: 800,
         fontSize: 32
@@ -13,7 +13,7 @@ function Logo () {
           fontWeight: 800}}>
             ДОМ
         </span>
-      </p>
+      </a>
     </>
   )
 }
