@@ -1,0 +1,25 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 120px 0;
+  padding-top: 60px;
+  gap: clamp(30px, 5vw, 80px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerColumn nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0 35px 0;
+}
+
+.footerColumn:last-child nav:last-of-type {
+  display: flex;
+  flex-direction: row;
+}

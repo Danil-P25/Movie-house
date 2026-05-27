@@ -1,5 +1,5 @@
 .catalog {
-  margin-top: 100px;
+  margin: 100px 0;
   position: relative;
 }
 
@@ -13,10 +13,10 @@
 .catalog::before {
   content: '';
   position: absolute;
-  top: 42%;
+  top: 30%;
   right: 15%;
-  width: 503px;
-  height: 543px;
+  width: 531px;
+  height: 566px;
   background: radial-gradient(circle, rgb(203 56 245 / 15%), transparent 70%);
   border-radius: 56%;
   pointer-events: none;
@@ -26,7 +26,7 @@
 .catalog::after {
   content: '';
   position: absolute;
-  bottom: 15%;
+  bottom: 10%;
   left: 6%;
   width: 420px;
   height: 450px;

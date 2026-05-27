@@ -1,4 +1,4 @@
-import SearchIcon from "../../UI/Icon/SearchIcon"
+import SearchIcon from "../../UI/SearchIcon/SearchIcon"
 import styles from "./Search.module.css"
 
 function Search () {

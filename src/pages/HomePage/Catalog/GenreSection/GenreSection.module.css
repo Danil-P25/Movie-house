@@ -16,13 +16,13 @@
   gap: 20px;
   list-style: none;
   padding: 0;
-  flex-wrap: wrap;
 }
 
 .catalogList li {
   flex-shrink: 0;
   cursor: pointer;
   transition: transform 0.2s;
+  width: clamp(180px, 20.5vw, 400px);
 }
 
 .catalogList li:hover {
@@ -30,7 +30,7 @@
 }
 
 .imgCatalog {
-  width: clamp(240px, 20.5vw, 330px);
+  width: clamp(200px, 20.5vw, 400px);
   height: auto;
   border-radius: 12px;
   object-fit: cover;
@@ -46,7 +46,6 @@
 }
 
 .catalogList li h4 {
-  font-size: 14px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
