@@ -26,6 +26,7 @@
   transition: all 0.3s ease;
   list-style: none;
   width: 280px;
+  cursor: pointer;
 }
 
 .releaseItem:first-child {

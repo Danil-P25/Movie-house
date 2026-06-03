@@ -4,7 +4,9 @@ import {
   genreMovieList,
   genreTvList,
   discoverMovie,
-  discoverTv
+  discoverTv,
+  movieDetails,
+  tvSeriesDetails
 } from "../generated/api/tmdb";
 
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
@@ -33,4 +35,20 @@ export const getContentByGenre = async (genreId: number) => {
   const tvWithType = tvShows.data.results!.map((tv) => ({ ...tv, type: "tv" }));
   const allContent = [...moviesWithType, ...tvWithType];
   return allContent.sort(() => Math.random() - 0.5);
+};
+
+export const getMovieDetails = async (movieId: string | number) => {
+  const response = await movieDetails(
+    Number(movieId),
+    LANGUAGE_RU
+  );
+  return response.data;
+};
+
+export const getTvDetails = async (tvId: string | number) => {
+  const response = await tvSeriesDetails(
+    Number(tvId),
+    LANGUAGE_RU
+  );
+  return response.data;
 };

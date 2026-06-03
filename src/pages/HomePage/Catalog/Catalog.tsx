@@ -2,7 +2,7 @@ import styles from "./Catalog.module.css";
 import { useState, useEffect } from "react";
 import { getContentByGenre } from "../../../api/helpers";
 import { useGenre } from "../../hooks/useGenres/useGenres";
-import GenreSection from "./GenreSection/GenreSection";
+import GenreSection from "./GenreCatalog/GenreCatalog";
 import { PartialMovie } from "../../../shared/types/common";
 
 function Catalog() {
@@ -29,11 +29,11 @@ function Catalog() {
         thrillersData,
         detectivesData,
       ]) => {
-        setComedies(comediesData.slice(0, 4));
-        setDramas(dramasData.slice(0, 4));
-        setFantasy(fantasyData.slice(0, 4));
-        setThrillers(thrillersData.slice(0, 4));
-        setDetectives(detectivesData.slice(0, 4));
+        setComedies(comediesData.slice(0, 10));
+        setDramas(dramasData.slice(0, 10));
+        setFantasy(fantasyData.slice(0, 10));
+        setThrillers(thrillersData.slice(0, 10));
+        setDetectives(detectivesData.slice(0, 10));
       },
     );
   }, []);

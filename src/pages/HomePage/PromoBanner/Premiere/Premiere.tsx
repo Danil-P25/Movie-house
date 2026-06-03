@@ -2,10 +2,12 @@ import styles from "./Premiere.module.css";
 import { getUpcomingMovies } from "../../../../api/helpers";
 import { useState, useEffect } from "react";
 import { Movie } from "../../../../shared/types/common";
+import { useNavigate } from "react-router-dom";
 
 function Premiere() {
   const [movies, setMovies] = useState<Partial<Movie>[]>([]);
   const [startIndex, setStartIndex] = useState<number>(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     getUpcomingMovies().then((response) => {
@@ -65,6 +67,7 @@ function Premiere() {
           <li
             key={movie.id}
             className={styles.releaseItem}
+            onClick={() => navigate(`/${movie.type}/${movie.type}`)}
             style={getItemStyle(index as 0 | 1 | 2)}
           >
             <img

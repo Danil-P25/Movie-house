@@ -1,25 +1,12 @@
+import { Link } from "react-router-dom";
+import styles from "./Logo.module.css";
+
 function Logo() {
   return (
-    <>
-      <a
-        href="#"
-        style={{
-          color: "white",
-          fontWeight: 800,
-          fontSize: 32,
-        }}
-      >
-        КИНО
-        <span
-          style={{
-            color: "red",
-            fontWeight: 800,
-          }}
-        >
-          ДОМ
-        </span>
-      </a>
-    </>
+    <Link to="/" className={styles.logoLink}>
+      КИНО
+      <span className={styles.logoText}>ДОМ</span>
+    </Link>
   );
 }
 export default Logo;
