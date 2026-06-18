@@ -1,19 +1,15 @@
 .contentRelease {
-  display: flex;
-  gap: 25px;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  z-index: 2;
-  margin: 60px 0 0 50px;
-  width: 800px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .releaseList {
   display: flex;
   justify-content: center;
   align-items: center;
-  list-style: none;
+  overflow: visible;
   padding: 0;
   margin: 0;
   position: relative;
@@ -21,13 +17,35 @@
 }
 
 .releaseItem {
-  position: relative;
-  width: clamp(200px, 23.75vw, 380px);
-  transition: all 0.3s ease;
-  list-style: none;
   width: 280px;
   cursor: pointer;
+  transition: all 0.4s ease;
+  transform: scale(0.7);
+  opacity: 0.4;
+  filter: blur(5px);
 }
+
+.releaseItem:global(.swiper-slide-active) {
+  transform: scale(1);
+  z-index: 3;
+  opacity: 1;
+  filter: blur(0);
+}
+
+.releaseItem:global(.swiper-slide-prev) {
+  transform: scale(0.85);
+  z-index: 2;
+  opacity: 0.7;
+  filter: blur(4px);
+}
+
+.releaseItem:global(.swiper-slide-next) {
+  transform: scale(0.85);
+  z-index: 2;
+  opacity: 0.7;
+  filter: blur(4px);
+}
+
 
 .releaseItem:first-child {
   margin-left: 0;
@@ -55,19 +73,41 @@
   padding: 2px 4px;
 }
 
-.nextButton {
-  font-size: clamp(20px, 2.2vw, 35px);
-  color: #ccc;
+.customPrev,
+.customNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(20, 16, 37, 0.8);
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
   transition: all 0.2s ease;
-  cursor: pointer;
 }
 
-.nextButton:hover {
-  transform: scale(1.2);
+.customPrev {
+  left: 10px;
 }
 
-.nextButton:active {
-  transform: scale(0.95);
+.customNext {
+  right: 10px
+}
+
+.customPrev:hover,
+.customNext:hover {
+  transform: translateY(-50%) scale(1.1);
+  background: rgba(20, 16, 37, 1);
+}
+
+.customPrev:active,
+.customNext:active {
+  transform: translateY(-50%) scale(0.95);
 }
 
 .contentApi {
@@ -78,3 +118,4 @@
   margin-top: 5px;
   font-weight: 500;
 }
+

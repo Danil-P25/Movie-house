@@ -1,74 +1,47 @@
 import styles from "./Premiere.module.css";
-import { getUpcomingMovies } from "../../../../api/helpers";
-import { useState, useEffect } from "react";
-import { Movie } from "../../../../shared/types/common";
+import { getUpcomingMovies } from "@/api/movie.api";
 import { useNavigate } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import PremiereSkeleton from "./PremiereSkeleton";
 
 function Premiere() {
-  const [movies, setMovies] = useState<Partial<Movie>[]>([]);
-  const [startIndex, setStartIndex] = useState<number>(0);
+  const {
+    data: movies = [],
+    isLoading,
+    error,
+  } = useQuery({
+    queryKey: ["upcomingMovies"],
+    queryFn: getUpcomingMovies,
+  });
   const navigate = useNavigate();
 
-  useEffect(() => {
-    getUpcomingMovies().then((response) => {
-      const results = response.data.results || [];
-      const shuffled = [...results].sort(() => Math.random() - 0.5);
-      setMovies(shuffled.slice(0, 6));
-    });
-  }, []);
-
-  const handleNext = () => {
-    setStartIndex((prev) => (prev + 1) % movies.length);
-  };
-
-  const visibleMovies = [...Array(3)].map(
-    (_, i) => movies[(startIndex + i) % movies.length],
-  );
-
-  const getItemStyle = (position: 0 | 1 | 2): React.CSSProperties => {
-    switch (position) {
-      case 0:
-        return {
-          transform: "translateX(0) scale(1)",
-          zIndex: 3,
-          opacity: 1,
-          marginRight: "0",
-        };
-      case 1:
-        return {
-          transform: "translateX(-20px) scale(0.85)",
-          zIndex: 2,
-          opacity: 0.7,
-          filter: "blur(5px)",
-          marginLeft: "-60px",
-        };
-      case 2:
-        return {
-          transform: "translateX(-40px) scale(0.7)",
-          zIndex: 1,
-          opacity: 0.4,
-          filter: "blur(5px)",
-          marginLeft: "-60px",
-        };
-      default:
-        return {};
-    }
-  };
-
-  if (movies.length === 0) return null;
+  if (isLoading) return <PremiereSkeleton />;
+  if (error) return <div>Ошибка загрузки</div>;
 
   return (
     <div className={styles.contentRelease}>
-      <button onClick={handleNext} className={styles.nextButton}>
-        ⬅
-      </button>
-      <ul className={styles.releaseList}>
-        {visibleMovies.map((movie, index) => (
-          <li
+      <button className={styles.customPrev}>⮜</button>
+      <Swiper
+        className={styles.releaseList}
+        modules={[Navigation]}
+        navigation={{
+          prevEl: `.${styles.customPrev}`,
+          nextEl: `.${styles.customNext}`,
+        }}
+        slidesPerView={3}
+        loop={true}
+        centeredSlides={true}
+        spaceBetween={-30}
+      >
+        {movies.map((movie) => (
+          <SwiperSlide
             key={movie.id}
             className={styles.releaseItem}
-            onClick={() => navigate(`/${movie.type}/${movie.type}`)}
-            style={getItemStyle(index as 0 | 1 | 2)}
+            onClick={() => navigate(`/movie/${movie.id}`)}
           >
             <img
               className={styles.imgPromo}
@@ -80,9 +53,10 @@ function Premiere() {
               <span className={styles.TextDate}>Премьера</span>
               <span>{movie.release_date}</span>
             </div>
-          </li>
+          </SwiperSlide>
         ))}
-      </ul>
+      </Swiper>
+      <button className={styles.customNext}>⮞</button>
     </div>
   );
 }

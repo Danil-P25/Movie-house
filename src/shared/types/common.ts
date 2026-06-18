@@ -8,7 +8,17 @@ export interface Movie {
   release_date: string;
   genre_ids: number[];
   overview: string;
-  type?: string;
+  type?: "movie" | "tv";
+}
+
+export interface CatalogItem {
+  id?: number;
+  title?: string;
+  name?: string;
+  backdrop_path?: string;
+  vote_average?: number;
+  genre_ids?: number[];
+  type: "movie" | "tv";
 }
 
 export type PartialMovie = Partial<Movie>

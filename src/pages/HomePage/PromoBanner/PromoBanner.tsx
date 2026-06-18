@@ -7,10 +7,12 @@ function PromoBanner() {
     <section>
       <BackgroundPromo>
         <div className={styles.promoInfo}>
-          <h1 className={styles.promoTitle}>Самые сочные премьеры кино — у вас дома</h1>
+          <h1 className={styles.promoTitle}>
+            Самые сочные премьеры кино — у вас дома
+          </h1>
           <p>
-            Ежедневно пополняемая библиотека с лучшими фильмами и сериалами — в дубляже и
-            оригинале.Целый месяц бесплатно!
+            Ежедневно пополняемая библиотека с лучшими фильмами и сериалами — в
+            дубляже и оригинале.Целый месяц бесплатно!
           </p>
           <button className={styles.promoButton}>Смотреть бесплатно</button>
         </div>

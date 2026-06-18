@@ -2,23 +2,27 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import HomePage from "./pages/HomePage/HomePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MoviePage from "./pages/MoviePage/MoviePage";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import MediaPage from "./pages/MediaPage/MediaPage";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <BrowserRouter>
-      <>
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/movie/:id" element={<MoviePage type="movie" />} />
-            <Route path="/tv/:id" element={<MoviePage type="tv" />} />
-          </Routes>
-        </main>
-        <Footer />
-      </>
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <>
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/:type/:id" element={<MediaPage />} />
+            </Routes>
+          </main>
+          <Footer />
+        </>
+      </BrowserRouter>
+    </QueryClientProvider>
   );
 }
 

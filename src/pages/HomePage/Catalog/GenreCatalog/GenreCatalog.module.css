@@ -18,33 +18,13 @@
   gap: 20px;
   list-style: none;
   padding: 0;
+  cursor: pointer;
 }
 
 .catalogList li {
   flex-shrink: 0;
   cursor: pointer;
-  transition: transform 0.2s;
   width: clamp(180px, 20.5vw, 400px);
-}
-
-.catalogList li:hover {
-  transform: scale(1.05);
-}
-
-.imgCatalog {
-  width: clamp(200px, 20.5vw, 400px);
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.catalogContent {
-  display: flex;
-  gap: 10px;
-  margin: 10px 0 2px 0;
-  flex-wrap: nowrap;
-  color: rgba(255, 255, 255, 0.5);
 }
 
 .catalogBox {
@@ -65,24 +45,10 @@
   color: #ccc;
   transition: all 0.2s ease;
   cursor: pointer;
-  margin: 0 0 50px 0;
+  margin: 0 0 100px 0;
   transition: all 0.2s ease;
 }
 
 .buttonList:hover {
   transform: scale(1.2);
-}
-
-.catalogContent span {
-  white-space: nowrap;
-}
-
-.catalogContent span:last-child {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 140px;
-}
-
-.catalogContent span:first-child {
-  color: red;
 }

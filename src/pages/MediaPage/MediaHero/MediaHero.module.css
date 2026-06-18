@@ -1,0 +1,66 @@
+.hero {
+  position: relative;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.heroBackground {
+  position: absolute;
+  inset: 0;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: 0;
+
+  -webkit-mask-image:
+    linear-gradient(
+      to bottom,
+      black 0%,
+      black 70%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to right,
+      transparent 0%,
+      black 15%,
+      black 85%,
+      transparent 100%
+    );
+
+  -webkit-mask-composite: source-in;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(20,16,37,1) 0%,
+      rgba(20,16,37,.85) 15%,
+      transparent 40%
+    ),
+
+    linear-gradient(
+      to left,
+      rgba(20,16,37,1) 0%,
+      rgba(20,16,37,.85) 15%,
+      transparent 40%
+    );
+}
+
+.hero > :not(.heroBackground) {
+  position: relative;
+  z-index: 2;
+}

@@ -1,22 +1,29 @@
-import { getPopularMovies } from "../../../../api/helpers";
-import { useState, useEffect } from "react";
+import { getPopularMovies } from "@/api/movie.api";
 import styles from "./BackgroundPromo.module.css";
 import { ReactNode } from "react";
-import type { moviePopularListResponse } from "../../../../generated/api/tmdb";
+import { useQuery } from "@tanstack/react-query";
 
 function BackgroundPromo({ children }: { children: ReactNode }) {
-  const [movies, setMovies] = useState<any[]>([]);
+  const {
+    data = [],
+    isLoading,
+    error,
+  } = useQuery({
+    queryKey: ["popularMovies"],
+    queryFn: getPopularMovies,
+  });
 
-  useEffect(() => {
-    getPopularMovies().then((data: moviePopularListResponse) => {
-      setMovies(data.data.results!.slice(0, 9));
-    });
-  }, []);
+  const movies = data.slice(0, 9);
+
+  if (isLoading) return <div className={styles.content}>{children}</div>;
+  if (error) return <div>Ошибка</div>;
+
+  // Скелетон не забыть
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.background}>
-        {movies.map((movie: any) => (
+        {movies.map((movie) => (
           <img
             key={movie.id}
             src={`https://image.tmdb.org/t/p/w200${movie.backdrop_path}`}

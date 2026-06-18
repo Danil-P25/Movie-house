@@ -1,0 +1,17 @@
+.containerButton {
+  display: flex;
+  gap: 10px;
+}
+
+.buttonWatch {
+  background-color: red;
+}
+
+.containerButton button {
+  border: 1px solid;
+  transition: all 0.2s ease;
+}
+
+.containerButton button:hover {
+transform: scale(1.1);
+}

@@ -1,0 +1,45 @@
+.card {
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.08);
+  z-index: 10;
+}
+
+.imgCatalog {
+  width: 100%;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.card:hover .imgCatalog {
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+.catalogContent {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 2px 0;
+  flex-wrap: nowrap;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.catalogContent span {
+  white-space: nowrap;
+}
+
+.catalogContent span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 140px;
+}
+
+.catalogContent span:first-child {
+  color: red;
+}
