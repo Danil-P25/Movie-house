@@ -1,0 +1,5 @@
+.containerDescription {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(30px, 3vw, 50px);
+}

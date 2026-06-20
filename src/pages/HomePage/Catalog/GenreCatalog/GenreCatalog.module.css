@@ -1,0 +1,48 @@
+.boxGenre {
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.boxGenre h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow:
+    0 0 10px #7c7c7c,
+    0 0 20px #6f6868;
+}
+
+.catalogList {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.catalogList li {
+  flex-shrink: 0;
+  cursor: pointer;
+  width: clamp(180px, 20.5vw, 400px);
+}
+
+.catalogBox {
+  display: flex;
+  justify-content: center;
+  gap: clamp(10px, 1.25vw, 20px);
+}
+
+.catalogList li h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: clamp(200px, 20.5vw, 330px);
+}
+
+.buttonList {
+  font-size: clamp(20px, 2.2vw, 35px);
+  margin: 0 0 100px 0;
+  border: none;
+  color: #ccc;
+}

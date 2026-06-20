@@ -1,17 +1,20 @@
 .catalog {
-  margin: 100px 0;
+  margin-top: 100px;
   position: relative;
+  margin-inline: clamp(30px, 5.6vw, 90px);
 }
 
 .titleCatalog {
   font-weight: 700;
   font-size: 32px;
   margin: 0 0 60px 0;
-  text-shadow: 0 0 10px #7c7c7c, 0 0 20px #6f6868;
+  text-shadow:
+    0 0 10px #7c7c7c,
+    0 0 20px #6f6868;
 }
 
 .catalog::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 30%;
   right: 15%;
@@ -24,7 +27,7 @@
 }
 
 .catalog::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 10%;
   left: 6%;
@@ -34,19 +37,4 @@
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
-}
-
-.showAll {
-font-weight: 600;
-font-size: 16px;
-color: white;
-border: 1px solid;
-padding: 18px 24px;
-border-radius: 10px;
-cursor: pointer;
-transition: transform 0.3s ease;
-}
-
-.showAll:hover {
-  transform: scale(1.1);
 }

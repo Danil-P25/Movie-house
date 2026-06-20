@@ -1,0 +1,9 @@
+.containerButton {
+  display: flex;
+  gap: 10px;
+}
+
+.buttonWatch {
+  background-color: red;
+  border: none;
+}

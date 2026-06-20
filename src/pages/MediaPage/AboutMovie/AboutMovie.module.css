@@ -1,0 +1,16 @@
+.about {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 80px 100px 0 100px;
+  column-gap: clamp(120px, 15vw, 170px);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.sidebar {
+  align-self: start;
+}

@@ -1,0 +1,19 @@
+.containerMeta {
+  display: flex;
+  gap: 10px;
+}
+
+.containerMeta span {
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  backdrop-filter: blur(10px);
+}
+
+.containerMeta span:first-child {
+  color: red;
+  font-weight: 700;
+}
