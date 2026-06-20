@@ -1,5 +1,4 @@
 import styles from "./GenreCatalog.module.css";
-import { PartialMovie } from "@/shared/types/common";
 import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -7,6 +6,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import MovieCard from "@/components/UI/MovieCard/MovieCard";
 import { GenreSectionProps } from "@/hooks/useGenres/types";
+import clsx from "clsx";
+import AppButton from "@/components/UI/AppButton/AppButton";
 
 function GenreSection({ title, items, getGenreNames }: GenreSectionProps) {
   const navigate = useNavigate();
@@ -45,7 +46,9 @@ function GenreSection({ title, items, getGenreNames }: GenreSectionProps) {
             </SwiperSlide>
           ))}
         </Swiper>
-        <button className={`${styles.buttonList} ${navigationId}`}>⮜</button>
+        <AppButton className={clsx(styles.buttonList, navigationId)}>
+          ⮜
+        </AppButton>
       </div>
     </div>
   );

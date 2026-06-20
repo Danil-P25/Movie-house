@@ -378,7 +378,6 @@ export const accountDetails = async (accountId: number,
 }
 
 
-
 export type accountAddFavoriteResponse200 = {
   data: AccountAddFavorite200
   status: 200
@@ -3352,7 +3351,6 @@ export const movieCredits = async (movieId: number,
 
   }
 )
-
 
   const body = [204, 205, 304].includes(res.status) ? null : await res.text();
 

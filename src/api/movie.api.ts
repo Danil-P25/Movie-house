@@ -2,7 +2,8 @@ import { TMDB_CONFIG } from "./config";
 import {
   moviePopularList,
   movieUpcomingList,
-  movieDetails
+  movieDetails,
+  movieCredits
 } from "../generated/api/tmdb";
 
 
@@ -21,5 +22,16 @@ export const getMovieDetails = async (movieId: string | number) => {
     Number(movieId),
     TMDB_CONFIG
   );
+  return response.data;
+};
+
+export const getMovieCredits = async (
+  movieId: string | number,
+) => {
+  const response = await movieCredits(
+    Number(movieId),
+    TMDB_CONFIG,
+  );
+
   return response.data;
 };

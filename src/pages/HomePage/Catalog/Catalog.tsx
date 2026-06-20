@@ -5,16 +5,10 @@ import GenreSection from "./GenreCatalog/GenreCatalog";
 import { useQuery } from "@tanstack/react-query";
 import { CatalogItem } from "@/shared/types/common";
 import GenreSectionSkeleton from "./GenreCatalog/GenreSectionSkeleton";
+import { CATALOG_GENRES } from "@/shared/constants/genres";
+import AppButton from "@/components/UI/AppButton/AppButton";
 
 function Catalog() {
-  const catalogGenres = [
-    { id: 35, title: "Комедии" },
-    { id: 18, title: "Драмы" },
-    { id: 14, title: "Фэнтези" },
-    { id: 53, title: "Триллеры" },
-    { id: 9648, title: "Детективы" },
-  ];
-
   const {
     data: movies = [],
     isLoading,
@@ -22,7 +16,7 @@ function Catalog() {
   } = useQuery<CatalogItem[][]>({
     queryKey: ["catalog"],
     queryFn: () =>
-      Promise.all(catalogGenres.map((genre) => getContentByGenre(genre.id))),
+      Promise.all(CATALOG_GENRES.map((genre) => getContentByGenre(genre.id))),
   });
 
   const { getGenreNames } = useGenre();
@@ -42,7 +36,7 @@ function Catalog() {
   return (
     <section className={styles.catalog}>
       <h2 className={styles.titleCatalog}>Каталог фильмов и сериалов</h2>
-      {catalogGenres.map((genre, index) => (
+      {CATALOG_GENRES.map((genre, index) => (
         <GenreSection
           key={genre.id}
           title={genre.title}
@@ -50,7 +44,7 @@ function Catalog() {
           getGenreNames={getGenreNames}
         />
       ))}
-      <button className={styles.showAll}>Посмотреть всё</button>
+      <AppButton className={styles.showAll}>Посмотреть всё</AppButton>
     </section>
   );
 }

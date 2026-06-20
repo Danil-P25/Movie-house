@@ -2,23 +2,15 @@ import { getPopularMovies } from "@/api/movie.api";
 import styles from "./BackgroundPromo.module.css";
 import { ReactNode } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { getBackUrl } from "@/shared/utils/media";
 
 function BackgroundPromo({ children }: { children: ReactNode }) {
-  const {
-    data = [],
-    isLoading,
-    error,
-  } = useQuery({
+  const { data = [] } = useQuery({
     queryKey: ["popularMovies"],
     queryFn: getPopularMovies,
   });
 
-  const movies = data.slice(0, 9);
-
-  if (isLoading) return <div className={styles.content}>{children}</div>;
-  if (error) return <div>Ошибка</div>;
-
-  // Скелетон не забыть
+  const movies = data.slice(0, 9) ?? [];
 
   return (
     <div className={styles.wrapper}>
@@ -26,7 +18,7 @@ function BackgroundPromo({ children }: { children: ReactNode }) {
         {movies.map((movie) => (
           <img
             key={movie.id}
-            src={`https://image.tmdb.org/t/p/w200${movie.backdrop_path}`}
+            src={getBackUrl(movie.backdrop_path)}
             alt=""
             className={styles.bgImage}
           />

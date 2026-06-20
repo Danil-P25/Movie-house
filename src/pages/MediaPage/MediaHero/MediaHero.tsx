@@ -1,6 +1,7 @@
 import styles from "./MediaHero.module.css";
 import MovieInfo from "./MovieInfo/MovieInfo";
 import { MediaHeroProps } from "./types";
+import { getBackdropUrl } from "@/shared/utils/media";
 
 function MediaHero({ data }: MediaHeroProps) {
   return (
@@ -8,7 +9,7 @@ function MediaHero({ data }: MediaHeroProps) {
       <div
         className={styles.heroBackground}
         style={{
-          backgroundImage: `url(https://image.tmdb.org/t/p/original${data.backdrop_path})`,
+          backgroundImage: `url(${getBackdropUrl(data.backdrop_path)})`,
         }}
       ></div>
 

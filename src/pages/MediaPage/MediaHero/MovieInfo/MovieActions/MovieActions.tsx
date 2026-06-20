@@ -1,15 +1,16 @@
+import AppButton from "@/components/UI/AppButton/AppButton";
 import styles from "./MovieActions.module.css";
 function MovieActions() {
   return (
     <div className={styles.containerButton}>
-      <button className={styles.buttonWatch}>Смотреть фильм</button>
-      <button>Трейлер</button>
-      <button>
+      <AppButton className={styles.buttonWatch}>Смотреть фильм</AppButton>
+      <AppButton>Трейлер</AppButton>
+      <AppButton>
         <img src="/images/download.svg" alt="скачать" />
-      </button>
-      <button>
+      </AppButton>
+      <AppButton>
         <img src="/images/favourites.svg" alt="В избранное" />
-      </button>
+      </AppButton>
     </div>
   );
 }

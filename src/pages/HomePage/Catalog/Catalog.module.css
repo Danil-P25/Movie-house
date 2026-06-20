@@ -38,18 +38,3 @@
   pointer-events: none;
   z-index: 0;
 }
-
-.showAll {
-  font-weight: 600;
-  font-size: 16px;
-  color: white;
-  border: 1px solid;
-  padding: 18px 24px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.showAll:hover {
-  transform: scale(1.1);
-}

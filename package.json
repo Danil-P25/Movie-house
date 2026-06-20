@@ -15,9 +15,12 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.101.0",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.4.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-loading-skeleton": "^3.5.0",
+    "react-markdown": "^10.1.0",
     "react-router-dom": "^7.16.0",
     "swiper": "^12.2.0"
   },

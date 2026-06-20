@@ -1,4 +1,5 @@
 import styles from "./MovieCard.module.css";
+import { getPosterUrl } from "@/shared/utils/media";
 
 interface MovieCardProps {
   title: string;
@@ -13,7 +14,7 @@ function MovieCard({ title, image, rating, type, genres }: MovieCardProps) {
     <div className={styles.card}>
       <img
         className={styles.imgCatalog}
-        src={`https://image.tmdb.org/t/p/w500${image}`}
+        src={getPosterUrl(image)}
         alt={title}
       />
       <div className={styles.catalogContent}>

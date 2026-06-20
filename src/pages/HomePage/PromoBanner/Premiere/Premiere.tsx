@@ -7,6 +7,8 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import PremiereSkeleton from "./PremiereSkeleton";
+import { getPosterUrl } from "@/shared/utils/media";
+import AppButton from "@/components/UI/AppButton/AppButton";
 
 function Premiere() {
   const {
@@ -45,7 +47,7 @@ function Premiere() {
           >
             <img
               className={styles.imgPromo}
-              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+              src={getPosterUrl(movie.poster_path)}
               alt={movie.title}
             />
             <h3>{movie.title}</h3>
@@ -56,7 +58,7 @@ function Premiere() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <button className={styles.customNext}>⮞</button>
+      <AppButton className={styles.customNext}>⮞</AppButton>
     </div>
   );
 }

@@ -1,5 +1,7 @@
 import { MovieDetails } from "@/shared/types/media";
 import { MovieDetails200 } from "@/generated/api/types";
+import { TMDB_BACKDROP_ORIGINAL_URL, TMDB_BACKIMAGE_URL, TMDB_IMAGE_URL } from "../constants/tmdb";
+import { format } from "date-fns";
 
 export function isMovie(
   data: MovieDetails,
@@ -19,11 +21,12 @@ export function getDurationLabel(data:MovieDetails) {
   : "Количество сезонов";
 }
 
-export function getYear (data: MovieDetails) {
-  return (isMovie(data) ? data.release_date : data.first_air_date)?.slice(
-    0,
-    4,
-  )
+export function getYear(data: MovieDetails) {
+  const date = isMovie(data)
+    ? data.release_date
+    : data.first_air_date;
+
+  return date ? format(new Date(date), "yyyy") : "—";
 }
 
 export function getGenres (data: MovieDetails) {
@@ -31,4 +34,22 @@ export function getGenres (data: MovieDetails) {
     ?.slice(0, 2)
     .map((genre) => genre.name)
     .join(", ")
+}
+
+export function getPosterUrl(path?: string) {
+  return path
+    ? `${TMDB_IMAGE_URL}${path}`
+    : "/images/zagluchka.jpg";
+}
+
+export function getBackUrl(path?: string) {
+  return path
+    ? `${TMDB_BACKIMAGE_URL}${path}`
+    : "/images/zagluchka.jpg";
+}
+
+export function getBackdropUrl(path?: string) {
+  return path
+    ? `${TMDB_BACKDROP_ORIGINAL_URL}${path}`
+    : "/images/zagluchka.jpg";
 }
