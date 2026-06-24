@@ -4,3 +4,8 @@ export const TMDB_CONFIG = {
   api_key: API_KEY,
   language: "ru-RU"
 }
+
+export const TMDB_REVIEWS_CONFIG = {
+  api_key: API_KEY,
+  language: "en-US",
+};

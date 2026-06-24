@@ -5,11 +5,6 @@
   z-index: 1;
 }
 
-.card:hover {
-  transform: translateY(-10px) scale(1.08);
-  z-index: 10;
-}
-
 .imgCatalog {
   width: 100%;
   border-radius: 12px;

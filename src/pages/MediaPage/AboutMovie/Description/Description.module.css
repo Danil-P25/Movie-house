@@ -1,5 +1,10 @@
 .containerDescription {
   display: flex;
   flex-direction: column;
-  gap: clamp(30px, 3vw, 50px);
+  gap: clamp(20px, 2.5vw, 50px);
+}
+
+h2 {
+  text-shadow: 0 0 10px #7c7c7c, 0 0 20px #6f6868;
+  font-size: 32px;
 }

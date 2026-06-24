@@ -1,5 +1,5 @@
-import { TMDB_CONFIG } from "./config";
-import { tvSeriesCredits, tvSeriesDetails } from "../generated/api/tmdb";
+import { TMDB_CONFIG, TMDB_REVIEWS_CONFIG } from "./config";
+import { tvSeriesCredits, tvSeriesDetails, tvSeriesReviews } from "../generated/api/tmdb";
 
 export const getTvDetails = async (tvId: string | number) => {
   const response = await tvSeriesDetails(
@@ -18,4 +18,15 @@ export const getTvCredits = async (
   );
 
   return response.data;
+}
+
+export const getTvReviews = async (
+  tvId: string | number,
+) => {
+  const response = await tvSeriesReviews(
+    Number(tvId),
+    TMDB_REVIEWS_CONFIG,
+  );
+
+  return response.data.results ?? [];
 }

@@ -1,7 +1,15 @@
 import { MovieDetails } from "@/shared/types/media";
 import { MovieDetails200 } from "@/generated/api/types";
-import { TMDB_BACKDROP_ORIGINAL_URL, TMDB_BACKIMAGE_URL, TMDB_IMAGE_URL } from "../constants/tmdb";
+import { TMDB_BACKDROP_ORIGINAL_URL, TMDB_BACKIMAGE_URL, TMDB_IMAGE_AVATAR, TMDB_IMAGE_URL } from "../constants/tmdb";
 import { format } from "date-fns";
+
+export function getMediaTitle(data: MovieDetails) {
+  return (
+    ("title" in data ? data.title : undefined) ??
+    ("name" in data ? data.name : undefined) ??
+    "Без названия"
+  );
+}
 
 export function isMovie(
   data: MovieDetails,
@@ -53,3 +61,6 @@ export function getBackdropUrl(path?: string) {
     ? `${TMDB_BACKDROP_ORIGINAL_URL}${path}`
     : "/images/zagluchka.jpg";
 }
+
+export const getAvatarUrl = (path: string) =>
+  `${TMDB_IMAGE_AVATAR}${path}`;

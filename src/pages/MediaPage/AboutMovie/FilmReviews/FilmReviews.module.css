@@ -1,0 +1,5 @@
+.containerReviews {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 2.5vw, 50px);
+}
