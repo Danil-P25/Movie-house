@@ -8,7 +8,7 @@ function Description({ data }: MediaDataProps) {
   return (
     <div className={styles.containerDescription}>
       <h2>{title}</h2>
-      <span>{data.overview}</span>
+      <p>{data.overview}</p>
     </div>
   );
 }

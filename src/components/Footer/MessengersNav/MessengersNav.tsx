@@ -1,8 +1,8 @@
-// import styles from "./MessengersNav.module.css"
+import styles from "./MessengersNav.module.css";
 
 function MessengersNav() {
   return (
-    <nav>
+    <nav className={styles.nav}>
       <a href="#" target="_blank">
         <img src="/images/facebook.svg" alt="Фейсбук" />
       </a>

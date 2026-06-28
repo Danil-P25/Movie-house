@@ -1,15 +1,32 @@
-import { FilmReviewsProps } from "../types";
-import AuthorReviews from "./AuthorReviews/AuthorReviews";
-import EvaluationsReviews from "./EvaluationsReviews/EvaluationsReviews";
-import TextReviews from "./TextReviews/TextReviews";
+import { useReviews } from "@/hooks/useReviews/useReviews";
+import { useParams } from "react-router-dom";
+import ReviewCard from "./ReviewCard/ReviewCard";
+import styles from "./FilmReviews.module.css";
 
-function FilmReviews({ movieId }: FilmReviewsProps) {
+interface FilmReviewsProps {
+  mediaTitle: string;
+}
+
+function FilmReviews({ mediaTitle }: FilmReviewsProps) {
+  const { id, type } = useParams();
+
+  if (!id || (type !== "movie" && type !== "tv")) {
+    return null;
+  }
+
+  const { data: reviews = [] } = useReviews(id, type);
+  const visibleReviews = reviews.slice(0, 3);
+
+  if (!reviews.length) {
+    return <p>Рецензий пока нет</p>;
+  }
+
   return (
-    <div>
+    <div className={styles.containerReviews}>
       <h2>Рецензии</h2>
-      <AuthorReviews />
-      <TextReviews />
-      <EvaluationsReviews />
+      {visibleReviews.map((review) => (
+        <ReviewCard key={review.id} review={review} mediaTitle={mediaTitle} />
+      ))}
     </div>
   );
 }

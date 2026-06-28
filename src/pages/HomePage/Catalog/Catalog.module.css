@@ -23,7 +23,7 @@
   background: radial-gradient(circle, rgb(203 56 245 / 15%), transparent 70%);
   border-radius: 56%;
   pointer-events: none;
-  z-index: 0;
+  z-index: var(--z-base);
 }
 
 .catalog::after {
@@ -36,5 +36,5 @@
   background: radial-gradient(circle, rgb(17 0 255 / 18%), transparent 70%);
   border-radius: 50%;
   pointer-events: none;
-  z-index: 0;
+  z-index: var(--z-base);
 }

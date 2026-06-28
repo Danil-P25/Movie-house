@@ -4,6 +4,7 @@ import RelatedMovies from "./RelatedMovies/RelatedMovies";
 import MediaHero from "./MediaHero/MediaHero";
 import { useMediaDetails } from "@/hooks/useMediaDetails/useMediaDetails";
 import styles from "./MediaPage.module.css";
+import { useCredits } from "@/hooks/useCredits/useCredits";
 
 function MediaPage() {
   const { id, type } = useParams();
@@ -13,6 +14,7 @@ function MediaPage() {
   }
 
   const { data, isLoading, error } = useMediaDetails(id, type);
+  const { data: credits } = useCredits(id, type);
 
   if (isLoading) return <div>Загрузка...</div>;
 
@@ -23,7 +25,7 @@ function MediaPage() {
   return (
     <div className={styles.mediaPage}>
       <MediaHero data={data} />
-      <AboutMovie data={data} />
+      <AboutMovie data={data} credits={credits} />
       <RelatedMovies movieId={id} type={type} />
     </div>
   );
