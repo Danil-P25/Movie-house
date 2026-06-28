@@ -46,14 +46,14 @@ body::before {
   filter: blur(20px) brightness(1.2);
   opacity: 0.5;
   pointer-events: none;
-  z-index: 0;
+  z-index: var(--z-index-base);
 }
 
 header,
 main,
 footer {
   position: relative;
-  z-index: 1;
+  z-index: var(--z-index-content);
 }
 
 button {

@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import PremiereSkeleton from "./PremiereSkeleton";
 import { getPosterUrl } from "@/shared/utils/media";
 import AppButton from "@/components/UI/AppButton/AppButton";
+import { ROUTES } from "@/shared/router/routes";
 
 function Premiere() {
   const {
@@ -43,7 +44,7 @@ function Premiere() {
           <SwiperSlide
             key={movie.id}
             className={styles.releaseItem}
-            onClick={() => navigate(`/movie/${movie.id}`)}
+            onClick={() => navigate(ROUTES.mediaPage("movie", movie.id!))}
           >
             <img
               className={styles.imgPromo}

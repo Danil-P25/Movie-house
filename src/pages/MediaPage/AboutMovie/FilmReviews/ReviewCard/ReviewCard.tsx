@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import styles from "./ReviewCard.module.css";
 import { getAvatarUrl } from "@/shared/utils/media";
 import AppButton from "@/components/UI/AppButton/AppButton";
+import { format } from "date-fns";
 
 interface ReviewCardProps {
   review: MovieReviews200ResultsItem;
@@ -29,7 +30,9 @@ function ReviewCard({ review, mediaTitle }: ReviewCardProps) {
           <span className={styles.author}>{review.author}</span>
 
           <span className={styles.date}>
-            {new Date(review.created_at ?? "").toLocaleDateString()}
+            {review.created_at
+              ? format(new Date(review.created_at), "d.MM.yyyy")
+              : "—"}
           </span>
         </div>
       </div>

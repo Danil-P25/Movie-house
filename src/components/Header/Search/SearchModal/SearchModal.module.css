@@ -1,43 +1,69 @@
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(3px);
-  z-index: 998;
+  background: rgba(0,0,0,.75);
+  backdrop-filter: blur(4px);
+  z-index: var(--z-backdrop);
 }
 
 .modal {
   position: fixed;
-  top: 0;
   left: 50%;
+  top: 40px;
   transform: translateX(-50%);
-  width: 100%;
-  max-width: 1280px;
-  min-height: 420px;
-  background: #050505;
-  z-index: 999;
-  padding: 32px 64px;
-  box-sizing: border-box;
+  width: 55vw;
+  max-height: 80vh;
+  background: #111111;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: var(  --z-popover);
+  box-shadow: 0 15px 60px rgba(0,0,0,.5);
 }
 
-.searchBar {
-  width: 100%;
+.header {
   display: flex;
   align-items: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px;
+  border-bottom: 1px solid #262626;
 }
 
 .input {
-  width: 100%;
+  flex: 1;
+  background: transparent;
   border: none;
   outline: none;
-  background: transparent;
   color: white;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 24px;
 }
 
 .input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: #7a7a7a;
+}
+
+.close {
+  border: none;
+  background: transparent;
+  color: #999;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.results {
+  max-height: 65vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px;
+  scrollbar-width: none;
+}
+
+.results::-webkit-scrollbar {
+  display: none;
+}
+
+.info {
+  padding: 40px;
+  text-align: center;
+  color: #8d8d8d;
 }

@@ -6462,7 +6462,6 @@ export const tvSeriesVideos = async (seriesId: number,
 
   }
 )
-tvSeriesReviews
 
   const body = [204, 205, 304].includes(res.status) ? null : await res.text();
 

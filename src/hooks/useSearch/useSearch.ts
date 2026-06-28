@@ -3,7 +3,7 @@ import { getSearchResults } from "@/api/search.api";
 import { useDebounce } from "use-debounce";
 
 export const useSearch = (query: string) => {
-  const [debouncedQuery] = useDebounce(query, 500);
+  const [debouncedQuery] = useDebounce(query, 300);
 
   return useQuery({
     queryKey: ["search", debouncedQuery],

@@ -8,6 +8,7 @@ import MovieCard from "@/components/UI/MovieCard/MovieCard";
 import { GenreSectionProps } from "@/hooks/useGenres/types";
 import clsx from "clsx";
 import AppButton from "@/components/UI/AppButton/AppButton";
+import { ROUTES } from "@/shared/router/routes";
 
 function GenreSection({ title, items, getGenreNames }: GenreSectionProps) {
   const navigate = useNavigate();
@@ -34,7 +35,11 @@ function GenreSection({ title, items, getGenreNames }: GenreSectionProps) {
           {items.map((item) => (
             <SwiperSlide
               key={item.id}
-              onClick={() => navigate(`/${item.type}/${item.id}`)}
+              onClick={() =>
+                item.id &&
+                item.type &&
+                navigate(ROUTES.mediaPage(item.type, item.id))
+              }
             >
               <MovieCard
                 title={item.title || item.name || ""}
@@ -47,7 +52,7 @@ function GenreSection({ title, items, getGenreNames }: GenreSectionProps) {
           ))}
         </Swiper>
         <AppButton className={clsx(styles.buttonList, navigationId)}>
-          ⮜
+          ⮞
         </AppButton>
       </div>
     </div>

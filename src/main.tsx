@@ -4,6 +4,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 import { SkeletonTheme } from "react-loading-skeleton";
 import App from "./App";
 import "./index.css";
+import "./shared/styles/variables.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
