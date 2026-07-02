@@ -13,7 +13,6 @@ function MediaPage() {
   if (!id || (type !== "movie" && type !== "tv")) {
     return <div>Ошибка 404</div>;
   }
-
   const { data, isLoading, error } = useMediaDetails(id, type);
   const { data: credits } = useCredits(id, type);
 
@@ -24,11 +23,9 @@ function MediaPage() {
       </div>
     );
   }
-
   if (error || !data) {
     return <div>Ошибка загрузки</div>;
   }
-
   return (
     <div className={styles.mediaPage}>
       <MediaHero data={data} />
