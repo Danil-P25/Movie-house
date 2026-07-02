@@ -1,15 +1,11 @@
 import { useNavigate } from "react-router-dom";
-
 import { SearchMulti200ResultsItem } from "@/generated/api/types";
-
 import { getPosterUrl } from "@/shared/utils/media";
-
 import styles from "./SearchResultCard.module.css";
 import AppButton from "@/components/UI/AppButton/AppButton";
 
 interface Props {
   item: SearchMulti200ResultsItem;
-
   onClose: () => void;
 }
 
