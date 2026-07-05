@@ -8,12 +8,15 @@
     "build": "tsc && vite build",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
     "lint": "oxlint src",
     "lint:fix": "oxlint --fix src",
     "format": "oxfmt src",
     "format:check": "oxfmt --check src",
     "preview": "vite preview",
-    "generate:api": "orval --config ./orval.config.ts"
+    "generate:api": "orval --config ./orval.config.ts",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.101.0",
@@ -40,8 +43,18 @@
     "orval": "^8.14.0",
     "oxfmt": "^0.52.0",
     "oxlint": "^1.67.0",
+    "sonda": "^0.13.1",
     "typescript": "^6.0.3",
     "vite": "^8.0.12",
-    "vitest": "^4.1.9"
+    "vitest": "^4.1.9",
+    "storybook": "^10.4.6",
+    "@storybook/react-vite": "^10.4.6",
+    "@chromatic-com/storybook": "^5.2.1",
+    "@storybook/addon-vitest": "^10.4.6",
+    "@storybook/addon-a11y": "^10.4.6",
+    "@storybook/addon-docs": "^10.4.6",
+    "@storybook/addon-onboarding": "^10.4.6",
+    "playwright": "^1.61.1",
+    "@vitest/browser-playwright": "^4.1.9"
   }
 }
