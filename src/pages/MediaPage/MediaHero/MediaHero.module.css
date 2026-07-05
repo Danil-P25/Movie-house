@@ -43,6 +43,7 @@
   position: absolute;
   inset: 0;
   z-index: 1;
+  
 
   background:
     linear-gradient(
@@ -59,6 +60,7 @@
       transparent 40%
     );
 }
+
 
 .hero > :not(.heroBackground) {
   position: relative;

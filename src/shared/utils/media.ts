@@ -11,9 +11,7 @@ export function getMediaTitle(data: MovieDetails) {
   );
 }
 
-export function isMovie(
-  data: MovieDetails,
-): data is MovieDetails200 {
+export function isMovie(data: MovieDetails): data is MovieDetails200 {
   return "original_title" in data;
 }
 
@@ -33,34 +31,33 @@ export function getYear(data: MovieDetails) {
   const date = isMovie(data)
     ? data.release_date
     : data.first_air_date;
-
   return date ? format(new Date(date), "yyyy") : "—";
 }
 
 export function getGenres (data: MovieDetails) {
+  if(!data.genres?.length) {
+    return undefined
+  }
   return data.genres
     ?.slice(0, 2)
     .map((genre) => genre.name)
     .join(", ")
 }
 
-export function getPosterUrl(path?: string) {
+function getImageUrl(baseUrl: string, path?: string) {
   return path
-    ? `${TMDB_IMAGE_URL}${path}`
+    ? `${baseUrl}${path}`
     : "/images/zagluchka.jpg";
 }
 
-export function getBackUrl(path?: string) {
-  return path
-    ? `${TMDB_BACKIMAGE_URL}${path}`
-    : "/images/zagluchka.jpg";
-}
+export const getPosterUrl = (path?: string) =>
+  getImageUrl(TMDB_IMAGE_URL, path);
 
-export function getBackdropUrl(path?: string) {
-  return path
-    ? `${TMDB_BACKDROP_ORIGINAL_URL}${path}`
-    : "/images/zagluchka.jpg";
-}
+export const getBackUrl = (path?: string) =>
+  getImageUrl(TMDB_BACKIMAGE_URL, path);
+
+export const getBackdropUrl = (path?: string) =>
+  getImageUrl(TMDB_BACKDROP_ORIGINAL_URL, path);
 
 export const getAvatarUrl = (path: string) =>
   `${TMDB_IMAGE_AVATAR}${path}`;

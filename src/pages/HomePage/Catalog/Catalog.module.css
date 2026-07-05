@@ -14,27 +14,27 @@
 }
 
 .catalog::before {
-  content: "";
-  position: absolute;
-  top: 30%;
-  right: 15%;
-  width: 531px;
-  height: 566px;
-  background: radial-gradient(circle, rgb(203 56 245 / 15%), transparent 70%);
-  border-radius: 56%;
-  pointer-events: none;
-  z-index: var(--z-base);
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -30%;
+    width: 120vw;
+    height: 120vw;
+    background:
+        radial-gradient(circle,
+            rgba(82,64,255,.10),
+            transparent 70%);
 }
 
 .catalog::after {
-  content: "";
-  position: absolute;
-  bottom: 10%;
-  left: 6%;
-  width: 420px;
-  height: 450px;
-  background: radial-gradient(circle, rgb(17 0 255 / 18%), transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: var(--z-base);
+    content: "";
+    position: absolute;
+    right: -35%;
+    bottom: -40%;
+    width: 110vw;
+    height: 110vw;
+    background:
+        radial-gradient(circle,
+            rgba(255,60,140,.08),
+            transparent 72%);
 }
