@@ -6,6 +6,6 @@
  */
 
 export type ListsCopyParams = {
-language?: string;
-page?: number;
+  language?: string;
+  page?: number;
 };

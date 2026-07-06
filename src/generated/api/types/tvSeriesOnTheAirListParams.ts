@@ -6,7 +6,7 @@
  */
 
 export type TvSeriesOnTheAirListParams = {
-language?: string;
-page?: number;
-timezone?: string;
+  language?: string;
+  page?: number;
+  timezone?: string;
 };

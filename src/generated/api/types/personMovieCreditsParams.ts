@@ -6,5 +6,5 @@
  */
 
 export type PersonMovieCreditsParams = {
-language?: string;
+  language?: string;
 };

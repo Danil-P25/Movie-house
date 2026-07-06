@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { TrendingMovies200ResultsItem } from './trendingMovies200ResultsItem.ts';
+import type { TrendingMovies200ResultsItem } from "./trendingMovies200ResultsItem.ts";
 
 export type TrendingMovies200 = {
   page?: number;

@@ -10,8 +10,7 @@ function BasicData({ data, credits }: MediaDataProps) {
 
   const rating = data.vote_average ?? "—";
   const genres = data.genres?.map((genre) => genre.name).join(", ") || "—";
-  const countries =
-    data.production_countries?.map((c) => c.name).join(", ") || "—";
+  const countries = data.production_countries?.map((c) => c.name).join(", ") || "—";
   const duration = getDurationInfo(data);
   const languages = data.spoken_languages?.map((l) => l.name).join(", ") || "—";
 

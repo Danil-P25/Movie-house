@@ -6,6 +6,6 @@
  */
 
 export type MovieListsParams = {
-language?: string;
-page?: number;
+  language?: string;
+  page?: number;
 };

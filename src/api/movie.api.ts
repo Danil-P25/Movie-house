@@ -4,9 +4,8 @@ import {
   movieUpcomingList,
   movieDetails,
   movieCredits,
-  movieReviews
+  movieReviews,
 } from "../generated/api/tmdb";
-
 
 export const getPopularMovies = async () => {
   const response = await moviePopularList(TMDB_CONFIG);
@@ -19,31 +18,18 @@ export const getUpcomingMovies = async () => {
 };
 
 export const getMovieDetails = async (movieId: string | number) => {
-  const response = await movieDetails(
-    Number(movieId),
-    TMDB_CONFIG
-  );
+  const response = await movieDetails(Number(movieId), TMDB_CONFIG);
   return response.data;
 };
 
-export const getMovieCredits = async (
-  movieId: string | number,
-) => {
-  const response = await movieCredits(
-    Number(movieId),
-    TMDB_CONFIG,
-  );
+export const getMovieCredits = async (movieId: string | number) => {
+  const response = await movieCredits(Number(movieId), TMDB_CONFIG);
 
   return response.data;
 };
 
-export const getMovieReviews = async (
-  movieId: string | number,
-) => {
-  const response = await movieReviews(
-    Number(movieId),
-    TMDB_REVIEWS_CONFIG,
-  );
+export const getMovieReviews = async (movieId: string | number) => {
+  const response = await movieReviews(Number(movieId), TMDB_REVIEWS_CONFIG);
 
   return response.data.results ?? [];
 };

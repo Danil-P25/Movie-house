@@ -6,5 +6,5 @@
  */
 
 export type ConfigurationCountriesParams = {
-language?: string;
+  language?: string;
 };

@@ -6,5 +6,5 @@
  */
 
 export type GenreMovieListParams = {
-language?: string;
+  language?: string;
 };

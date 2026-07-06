@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { MovieAccountStates200Rated } from './movieAccountStates200Rated.ts';
+import type { MovieAccountStates200Rated } from "./movieAccountStates200Rated.ts";
 
 export type MovieAccountStates200 = {
   id?: number;

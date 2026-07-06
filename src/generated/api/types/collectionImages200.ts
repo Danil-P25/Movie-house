@@ -4,8 +4,8 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { CollectionImages200BackdropsItem } from './collectionImages200BackdropsItem.ts';
-import type { CollectionImages200PostersItem } from './collectionImages200PostersItem.ts';
+import type { CollectionImages200BackdropsItem } from "./collectionImages200BackdropsItem.ts";
+import type { CollectionImages200PostersItem } from "./collectionImages200PostersItem.ts";
 
 export type CollectionImages200 = {
   id?: number;

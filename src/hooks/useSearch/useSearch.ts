@@ -7,8 +7,7 @@ export const useSearch = (query: string) => {
 
   return useQuery({
     queryKey: ["search", debouncedQuery],
-    queryFn: () =>
-      getSearchResults(debouncedQuery),
+    queryFn: () => getSearchResults(debouncedQuery),
     enabled: debouncedQuery.trim().length > 1,
     staleTime: 5 * 60 * 1000,
     retry: 1,

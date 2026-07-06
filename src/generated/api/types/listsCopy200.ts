@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { ListsCopy200ResultsItem } from './listsCopy200ResultsItem.ts';
+import type { ListsCopy200ResultsItem } from "./listsCopy200ResultsItem.ts";
 
 export type ListsCopy200 = {
   id?: number;

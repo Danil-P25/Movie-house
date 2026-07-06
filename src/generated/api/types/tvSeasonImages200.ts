@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { TvSeasonImages200PostersItem } from './tvSeasonImages200PostersItem.ts';
+import type { TvSeasonImages200PostersItem } from "./tvSeasonImages200PostersItem.ts";
 
 export type TvSeasonImages200 = {
   id?: number;

@@ -4,11 +4,11 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { AccountWatchlistTvSortBy } from './accountWatchlistTvSortBy.ts';
+import type { AccountWatchlistTvSortBy } from "./accountWatchlistTvSortBy.ts";
 
 export type AccountWatchlistTvParams = {
-language?: string;
-page?: number;
-session_id?: string;
-sort_by?: AccountWatchlistTvSortBy;
+  language?: string;
+  page?: number;
+  session_id?: string;
+  sort_by?: AccountWatchlistTvSortBy;
 };

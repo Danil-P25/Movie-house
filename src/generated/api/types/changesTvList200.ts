@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { ChangesTvList200ResultsItem } from './changesTvList200ResultsItem.ts';
+import type { ChangesTvList200ResultsItem } from "./changesTvList200ResultsItem.ts";
 
 export type ChangesTvList200 = {
   results?: ChangesTvList200ResultsItem[];

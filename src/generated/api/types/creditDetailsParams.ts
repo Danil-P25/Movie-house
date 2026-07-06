@@ -6,5 +6,5 @@
  */
 
 export type CreditDetailsParams = {
-language?: string;
+  language?: string;
 };

@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { GenreMovieList200GenresItem } from './genreMovieList200GenresItem.ts';
+import type { GenreMovieList200GenresItem } from "./genreMovieList200GenresItem.ts";
 
 export type GenreMovieList200 = {
   genres?: GenreMovieList200GenresItem[];

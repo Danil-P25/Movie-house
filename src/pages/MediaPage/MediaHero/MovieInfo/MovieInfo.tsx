@@ -7,9 +7,7 @@ import { isMovie } from "@/shared/utils/media";
 function MovieInfo({ data }: MovieInfoProps) {
   return (
     <div className={styles.containerInfo}>
-      <h1 className={styles.titleMain}>
-        {isMovie(data) ? data.original_title : data.name}
-      </h1>
+      <h1 className={styles.titleMain}>{isMovie(data) ? data.original_title : data.name}</h1>
       <MovieMeta data={data} />
       <MovieActions />
     </div>

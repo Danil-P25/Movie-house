@@ -4,8 +4,8 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { PersonCombinedCredits200CastItem } from './personCombinedCredits200CastItem.ts';
-import type { PersonCombinedCredits200CrewItem } from './personCombinedCredits200CrewItem.ts';
+import type { PersonCombinedCredits200CastItem } from "./personCombinedCredits200CastItem.ts";
+import type { PersonCombinedCredits200CrewItem } from "./personCombinedCredits200CrewItem.ts";
 
 export type PersonCombinedCredits200 = {
   cast?: PersonCombinedCredits200CastItem[];

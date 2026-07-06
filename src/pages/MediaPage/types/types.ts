@@ -1,7 +1,12 @@
-import { MovieCredits200, MovieDetails200, TvSeriesCredits200, TvSeriesDetails200 } from "@/generated/api/types";
+import {
+  MovieCredits200,
+  MovieDetails200,
+  TvSeriesCredits200,
+  TvSeriesDetails200,
+} from "@/generated/api/types";
 
 export interface MoviePageProps {
-  movieId: string | undefined; 
+  movieId: string | undefined;
 }
 
 export interface MovieDataProps {

@@ -4,11 +4,11 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { AccountRatedTvEpisodesSortBy } from './accountRatedTvEpisodesSortBy.ts';
+import type { AccountRatedTvEpisodesSortBy } from "./accountRatedTvEpisodesSortBy.ts";
 
 export type AccountRatedTvEpisodesParams = {
-language?: string;
-page?: number;
-session_id?: string;
-sort_by?: AccountRatedTvEpisodesSortBy;
+  language?: string;
+  page?: number;
+  session_id?: string;
+  sort_by?: AccountRatedTvEpisodesSortBy;
 };

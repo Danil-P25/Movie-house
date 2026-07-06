@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { MovieTopRatedList200ResultsItem } from './movieTopRatedList200ResultsItem.ts';
+import type { MovieTopRatedList200ResultsItem } from "./movieTopRatedList200ResultsItem.ts";
 
 export type MovieTopRatedList200 = {
   page?: number;

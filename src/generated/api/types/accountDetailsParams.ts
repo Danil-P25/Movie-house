@@ -6,5 +6,5 @@
  */
 
 export type AccountDetailsParams = {
-session_id?: string;
+  session_id?: string;
 };

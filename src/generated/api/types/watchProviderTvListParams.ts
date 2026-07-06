@@ -6,6 +6,6 @@
  */
 
 export type WatchProviderTvListParams = {
-language?: string;
-watch_region?: string;
+  language?: string;
+  watch_region?: string;
 };

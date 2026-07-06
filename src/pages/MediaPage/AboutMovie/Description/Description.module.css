@@ -5,6 +5,8 @@
 }
 
 h2 {
-  text-shadow: 0 0 10px #7c7c7c, 0 0 20px #6f6868;
+  text-shadow:
+    0 0 10px #7c7c7c,
+    0 0 20px #6f6868;
   font-size: 32px;
 }

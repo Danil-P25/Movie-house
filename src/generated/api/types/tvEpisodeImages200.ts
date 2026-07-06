@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { TvEpisodeImages200StillsItem } from './tvEpisodeImages200StillsItem.ts';
+import type { TvEpisodeImages200StillsItem } from "./tvEpisodeImages200StillsItem.ts";
 
 export type TvEpisodeImages200 = {
   id?: number;

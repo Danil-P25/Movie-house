@@ -6,5 +6,5 @@
  */
 
 export type ListRemoveMovieParams = {
-session_id: string;
+  session_id: string;
 };

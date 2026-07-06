@@ -6,6 +6,6 @@
  */
 
 export type PersonPopularListParams = {
-language?: string;
-page?: number;
+  language?: string;
+  page?: number;
 };

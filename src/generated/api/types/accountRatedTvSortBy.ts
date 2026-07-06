@@ -5,10 +5,9 @@
  * OpenAPI spec version: 3
  */
 
-export type AccountRatedTvSortBy = typeof AccountRatedTvSortBy[keyof typeof AccountRatedTvSortBy];
-
+export type AccountRatedTvSortBy = (typeof AccountRatedTvSortBy)[keyof typeof AccountRatedTvSortBy];
 
 export const AccountRatedTvSortBy = {
-  created_atasc: 'created_at.asc',
-  created_atdesc: 'created_at.desc',
+  created_atasc: "created_at.asc",
+  created_atdesc: "created_at.desc",
 } as const;

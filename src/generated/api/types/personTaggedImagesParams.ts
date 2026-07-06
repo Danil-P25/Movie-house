@@ -6,5 +6,5 @@
  */
 
 export type PersonTaggedImagesParams = {
-page?: number;
+  page?: number;
 };

@@ -6,6 +6,6 @@
  */
 
 export type MovieReviewsParams = {
-language?: string;
-page?: number;
+  language?: string;
+  page?: number;
 };

@@ -4,10 +4,10 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { GuestSessionRatedTvEpisodesSortBy } from './guestSessionRatedTvEpisodesSortBy.ts';
+import type { GuestSessionRatedTvEpisodesSortBy } from "./guestSessionRatedTvEpisodesSortBy.ts";
 
 export type GuestSessionRatedTvEpisodesParams = {
-language?: string;
-page?: number;
-sort_by?: GuestSessionRatedTvEpisodesSortBy;
+  language?: string;
+  page?: number;
+  sort_by?: GuestSessionRatedTvEpisodesSortBy;
 };

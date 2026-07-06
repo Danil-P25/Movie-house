@@ -4,8 +4,8 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { TvSeasonCredits200CastItem } from './tvSeasonCredits200CastItem.ts';
-import type { TvSeasonCredits200CrewItem } from './tvSeasonCredits200CrewItem.ts';
+import type { TvSeasonCredits200CastItem } from "./tvSeasonCredits200CastItem.ts";
+import type { TvSeasonCredits200CrewItem } from "./tvSeasonCredits200CrewItem.ts";
 
 export type TvSeasonCredits200 = {
   cast?: TvSeasonCredits200CastItem[];

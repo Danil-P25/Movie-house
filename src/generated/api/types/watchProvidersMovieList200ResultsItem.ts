@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { WatchProvidersMovieList200ResultsItemDisplayPriorities } from './watchProvidersMovieList200ResultsItemDisplayPriorities.ts';
+import type { WatchProvidersMovieList200ResultsItemDisplayPriorities } from "./watchProvidersMovieList200ResultsItemDisplayPriorities.ts";
 
 export type WatchProvidersMovieList200ResultsItem = {
   display_priorities?: WatchProvidersMovieList200ResultsItemDisplayPriorities;

@@ -4,8 +4,8 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { TvSeriesLatestId200LastEpisodeToAir } from './tvSeriesLatestId200LastEpisodeToAir.ts';
-import type { TvSeriesLatestId200SeasonsItem } from './tvSeriesLatestId200SeasonsItem.ts';
+import type { TvSeriesLatestId200LastEpisodeToAir } from "./tvSeriesLatestId200LastEpisodeToAir.ts";
+import type { TvSeriesLatestId200SeasonsItem } from "./tvSeriesLatestId200SeasonsItem.ts";
 
 export type TvSeriesLatestId200 = {
   adult?: boolean;

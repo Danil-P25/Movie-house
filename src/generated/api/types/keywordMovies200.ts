@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { KeywordMovies200ResultsItem } from './keywordMovies200ResultsItem.ts';
+import type { KeywordMovies200ResultsItem } from "./keywordMovies200ResultsItem.ts";
 
 export type KeywordMovies200 = {
   id?: number;

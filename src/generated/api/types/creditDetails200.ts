@@ -4,8 +4,8 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { CreditDetails200Media } from './creditDetails200Media.ts';
-import type { CreditDetails200Person } from './creditDetails200Person.ts';
+import type { CreditDetails200Media } from "./creditDetails200Media.ts";
+import type { CreditDetails200Person } from "./creditDetails200Person.ts";
 
 export type CreditDetails200 = {
   credit_type?: string;

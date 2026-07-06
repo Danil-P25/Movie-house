@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { DiscoverMovie200ResultsItem } from './discoverMovie200ResultsItem.ts';
+import type { DiscoverMovie200ResultsItem } from "./discoverMovie200ResultsItem.ts";
 
 export type DiscoverMovie200 = {
   page?: number;

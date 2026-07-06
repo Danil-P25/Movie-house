@@ -4,8 +4,8 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { TvSeriesWatchProviders200ResultsCABuyItem } from './tvSeriesWatchProviders200ResultsCABuyItem.ts';
-import type { TvSeriesWatchProviders200ResultsCAFlatrateItem } from './tvSeriesWatchProviders200ResultsCAFlatrateItem.ts';
+import type { TvSeriesWatchProviders200ResultsCABuyItem } from "./tvSeriesWatchProviders200ResultsCABuyItem.ts";
+import type { TvSeriesWatchProviders200ResultsCAFlatrateItem } from "./tvSeriesWatchProviders200ResultsCAFlatrateItem.ts";
 
 export type TvSeriesWatchProviders200ResultsCA = {
   link?: string;

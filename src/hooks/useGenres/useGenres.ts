@@ -9,11 +9,8 @@ export const useGenre = () => {
   });
 
   const genresMap = useMemo(
-    () =>
-      Object.fromEntries(
-        genres.map((genre) => [genre.id, genre.name])
-      ),
-    [genres]
+    () => Object.fromEntries(genres.map((genre) => [genre.id, genre.name])),
+    [genres],
   );
 
   const getGenreNames = (genreIds: number[]) =>

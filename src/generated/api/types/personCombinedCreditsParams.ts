@@ -6,5 +6,5 @@
  */
 
 export type PersonCombinedCreditsParams = {
-language?: string;
+  language?: string;
 };

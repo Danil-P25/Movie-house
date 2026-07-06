@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { CertificationMovieList200Certifications } from './certificationMovieList200Certifications.ts';
+import type { CertificationMovieList200Certifications } from "./certificationMovieList200Certifications.ts";
 
 export type CertificationMovieList200 = {
   certifications?: CertificationMovieList200Certifications;

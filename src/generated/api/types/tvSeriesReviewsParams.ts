@@ -6,6 +6,6 @@
  */
 
 export type TvSeriesReviewsParams = {
-language?: string;
-page?: number;
+  language?: string;
+  page?: number;
 };

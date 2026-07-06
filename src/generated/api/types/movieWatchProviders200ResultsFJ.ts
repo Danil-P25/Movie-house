@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { MovieWatchProviders200ResultsFJBuyItem } from './movieWatchProviders200ResultsFJBuyItem.ts';
+import type { MovieWatchProviders200ResultsFJBuyItem } from "./movieWatchProviders200ResultsFJBuyItem.ts";
 
 export type MovieWatchProviders200ResultsFJ = {
   link?: string;

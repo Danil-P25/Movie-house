@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { CreditDetails200MediaSeasonsItem } from './creditDetails200MediaSeasonsItem.ts';
+import type { CreditDetails200MediaSeasonsItem } from "./creditDetails200MediaSeasonsItem.ts";
 
 export type CreditDetails200Media = {
   adult?: boolean;

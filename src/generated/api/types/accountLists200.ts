@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { AccountLists200ResultsItem } from './accountLists200ResultsItem.ts';
+import type { AccountLists200ResultsItem } from "./accountLists200ResultsItem.ts";
 
 export type AccountLists200 = {
   page?: number;

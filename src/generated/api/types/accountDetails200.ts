@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { AccountDetails200Avatar } from './accountDetails200Avatar.ts';
+import type { AccountDetails200Avatar } from "./accountDetails200Avatar.ts";
 
 export type AccountDetails200 = {
   avatar?: AccountDetails200Avatar;

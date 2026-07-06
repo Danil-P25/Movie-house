@@ -42,7 +42,7 @@
 
 .date {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .content {
@@ -75,5 +75,7 @@
 }
 
 .actionButton:hover {
-  text-shadow: 0 0 10px #7c7c7c, 0 0 20px #6f6868;
+  text-shadow:
+    0 0 10px #7c7c7c,
+    0 0 20px #6f6868;
 }

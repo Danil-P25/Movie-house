@@ -6,5 +6,5 @@
  */
 
 export type WatchProvidersAvailableRegionsParams = {
-language?: string;
+  language?: string;
 };

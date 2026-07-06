@@ -35,11 +35,7 @@ function GenreSection({ title, items, getGenreNames }: GenreSectionProps) {
           {items.map((item) => (
             <SwiperSlide
               key={item.id}
-              onClick={() =>
-                item.id &&
-                item.type &&
-                navigate(ROUTES.mediaPage(item.type, item.id))
-              }
+              onClick={() => item.id && item.type && navigate(ROUTES.mediaPage(item.type, item.id))}
             >
               <MovieCard
                 title={item.title || item.name || ""}
@@ -51,9 +47,7 @@ function GenreSection({ title, items, getGenreNames }: GenreSectionProps) {
             </SwiperSlide>
           ))}
         </Swiper>
-        <AppButton className={clsx(styles.buttonList, navigationId)}>
-          ⮞
-        </AppButton>
+        <AppButton className={clsx(styles.buttonList, navigationId)}>⮞</AppButton>
       </div>
     </div>
   );

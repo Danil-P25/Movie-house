@@ -4,11 +4,11 @@
   padding: 12px;
   border-radius: 14px;
   cursor: pointer;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .card:hover {
-  background: rgba(255,255,255,.06);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .poster {

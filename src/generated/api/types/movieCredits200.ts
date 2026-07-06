@@ -4,8 +4,8 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { MovieCredits200CastItem } from './movieCredits200CastItem.ts';
-import type { MovieCredits200CrewItem } from './movieCredits200CrewItem.ts';
+import type { MovieCredits200CastItem } from "./movieCredits200CastItem.ts";
+import type { MovieCredits200CrewItem } from "./movieCredits200CrewItem.ts";
 
 export type MovieCredits200 = {
   id?: number;

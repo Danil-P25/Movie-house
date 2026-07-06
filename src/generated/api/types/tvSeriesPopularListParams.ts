@@ -6,6 +6,6 @@
  */
 
 export type TvSeriesPopularListParams = {
-language?: string;
-page?: number;
+  language?: string;
+  page?: number;
 };

@@ -48,9 +48,7 @@ describe("SearchResultCard", () => {
     renderComponent();
     const user = userEvent.setup();
     await user.click(screen.getByRole("button"));
-    expect(navigate).toHaveBeenCalledWith(
-      `/media/${movieItem.media_type}/${movieItem.id}`,
-    );
+    expect(navigate).toHaveBeenCalledWith(`/media/${movieItem.media_type}/${movieItem.id}`);
     expect(onClose).toHaveBeenCalledTimes(1);
   });
 });

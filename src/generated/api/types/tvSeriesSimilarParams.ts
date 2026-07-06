@@ -6,6 +6,6 @@
  */
 
 export type TvSeriesSimilarParams = {
-language?: string;
-page?: number;
+  language?: string;
+  page?: number;
 };

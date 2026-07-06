@@ -30,9 +30,7 @@ function ReviewCard({ review, mediaTitle }: ReviewCardProps) {
           <span className={styles.author}>{review.author}</span>
 
           <span className={styles.date}>
-            {review.created_at
-              ? format(new Date(review.created_at), "d.MM.yyyy")
-              : "—"}
+            {review.created_at ? format(new Date(review.created_at), "d.MM.yyyy") : "—"}
           </span>
         </div>
       </div>

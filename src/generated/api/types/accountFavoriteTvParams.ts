@@ -4,11 +4,11 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { AccountFavoriteTvSortBy } from './accountFavoriteTvSortBy.ts';
+import type { AccountFavoriteTvSortBy } from "./accountFavoriteTvSortBy.ts";
 
 export type AccountFavoriteTvParams = {
-language?: string;
-page?: number;
-session_id?: string;
-sort_by?: AccountFavoriteTvSortBy;
+  language?: string;
+  page?: number;
+  session_id?: string;
+  sort_by?: AccountFavoriteTvSortBy;
 };

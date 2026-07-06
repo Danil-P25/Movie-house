@@ -6,5 +6,5 @@
  */
 
 export type GenreTvListParams = {
-language?: string;
+  language?: string;
 };

@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { PersonTaggedImages200ResultsItem } from './personTaggedImages200ResultsItem.ts';
+import type { PersonTaggedImages200ResultsItem } from "./personTaggedImages200ResultsItem.ts";
 
 export type PersonTaggedImages200 = {
   id?: number;

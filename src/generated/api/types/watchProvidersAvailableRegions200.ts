@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { WatchProvidersAvailableRegions200ResultsItem } from './watchProvidersAvailableRegions200ResultsItem.ts';
+import type { WatchProvidersAvailableRegions200ResultsItem } from "./watchProvidersAvailableRegions200ResultsItem.ts";
 
 export type WatchProvidersAvailableRegions200 = {
   results?: WatchProvidersAvailableRegions200ResultsItem[];

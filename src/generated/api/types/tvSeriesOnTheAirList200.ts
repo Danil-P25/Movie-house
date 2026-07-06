@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { TvSeriesOnTheAirList200ResultsItem } from './tvSeriesOnTheAirList200ResultsItem.ts';
+import type { TvSeriesOnTheAirList200ResultsItem } from "./tvSeriesOnTheAirList200ResultsItem.ts";
 
 export type TvSeriesOnTheAirList200 = {
   page?: number;

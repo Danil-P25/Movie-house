@@ -4,11 +4,11 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { AccountRatedMoviesSortBy } from './accountRatedMoviesSortBy.ts';
+import type { AccountRatedMoviesSortBy } from "./accountRatedMoviesSortBy.ts";
 
 export type AccountRatedMoviesParams = {
-language?: string;
-page?: number;
-session_id?: string;
-sort_by?: AccountRatedMoviesSortBy;
+  language?: string;
+  page?: number;
+  session_id?: string;
+  sort_by?: AccountRatedMoviesSortBy;
 };

@@ -6,6 +6,6 @@
  */
 
 export type SearchCompanyParams = {
-query: string;
-page?: number;
+  query: string;
+  page?: number;
 };

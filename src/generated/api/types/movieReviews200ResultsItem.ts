@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { MovieReviews200ResultsItemAuthorDetails } from './movieReviews200ResultsItemAuthorDetails.ts';
+import type { MovieReviews200ResultsItemAuthorDetails } from "./movieReviews200ResultsItemAuthorDetails.ts";
 
 export type MovieReviews200ResultsItem = {
   author?: string;

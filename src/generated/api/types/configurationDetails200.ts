@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { ConfigurationDetails200Images } from './configurationDetails200Images.ts';
+import type { ConfigurationDetails200Images } from "./configurationDetails200Images.ts";
 
 export type ConfigurationDetails200 = {
   images?: ConfigurationDetails200Images;

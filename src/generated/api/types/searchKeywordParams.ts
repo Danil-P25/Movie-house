@@ -6,6 +6,6 @@
  */
 
 export type SearchKeywordParams = {
-query: string;
-page?: number;
+  query: string;
+  page?: number;
 };

@@ -4,14 +4,14 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { TvSeriesDetails200CreatedByItem } from './tvSeriesDetails200CreatedByItem.ts';
-import type { TvSeriesDetails200GenresItem } from './tvSeriesDetails200GenresItem.ts';
-import type { TvSeriesDetails200LastEpisodeToAir } from './tvSeriesDetails200LastEpisodeToAir.ts';
-import type { TvSeriesDetails200NetworksItem } from './tvSeriesDetails200NetworksItem.ts';
-import type { TvSeriesDetails200ProductionCompaniesItem } from './tvSeriesDetails200ProductionCompaniesItem.ts';
-import type { TvSeriesDetails200ProductionCountriesItem } from './tvSeriesDetails200ProductionCountriesItem.ts';
-import type { TvSeriesDetails200SeasonsItem } from './tvSeriesDetails200SeasonsItem.ts';
-import type { TvSeriesDetails200SpokenLanguagesItem } from './tvSeriesDetails200SpokenLanguagesItem.ts';
+import type { TvSeriesDetails200CreatedByItem } from "./tvSeriesDetails200CreatedByItem.ts";
+import type { TvSeriesDetails200GenresItem } from "./tvSeriesDetails200GenresItem.ts";
+import type { TvSeriesDetails200LastEpisodeToAir } from "./tvSeriesDetails200LastEpisodeToAir.ts";
+import type { TvSeriesDetails200NetworksItem } from "./tvSeriesDetails200NetworksItem.ts";
+import type { TvSeriesDetails200ProductionCompaniesItem } from "./tvSeriesDetails200ProductionCompaniesItem.ts";
+import type { TvSeriesDetails200ProductionCountriesItem } from "./tvSeriesDetails200ProductionCountriesItem.ts";
+import type { TvSeriesDetails200SeasonsItem } from "./tvSeriesDetails200SeasonsItem.ts";
+import type { TvSeriesDetails200SpokenLanguagesItem } from "./tvSeriesDetails200SpokenLanguagesItem.ts";
 
 export type TvSeriesDetails200 = {
   adult?: boolean;

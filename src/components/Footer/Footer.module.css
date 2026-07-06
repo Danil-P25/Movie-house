@@ -10,29 +10,23 @@
 }
 
 .footer::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    #3a1c71,
-    #d76d77,
-    #3a1c71,
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, #3a1c71, #d76d77, #3a1c71, transparent);
   box-shadow: 0 0 12px rgba(58, 28, 113, 0.5);
   animation: footerPulse 3s ease-in-out infinite;
 }
 
 @keyframes footerPulse {
-  0%, 100% { 
+  0%,
+  100% {
     opacity: 0.6;
   }
-  50% { 
+  50% {
     opacity: 1;
   }
 }

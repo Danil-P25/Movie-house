@@ -14,27 +14,21 @@
 }
 
 .catalog::before {
-    content: "";
-    position: absolute;
-    top: -40%;
-    left: -30%;
-    width: 120vw;
-    height: 120vw;
-    background:
-        radial-gradient(circle,
-            rgba(82,64,255,.10),
-            transparent 70%);
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -30%;
+  width: 120vw;
+  height: 120vw;
+  background: radial-gradient(circle, rgba(82, 64, 255, 0.1), transparent 70%);
 }
 
 .catalog::after {
-    content: "";
-    position: absolute;
-    right: -35%;
-    bottom: -40%;
-    width: 110vw;
-    height: 110vw;
-    background:
-        radial-gradient(circle,
-            rgba(255,60,140,.08),
-            transparent 72%);
+  content: "";
+  position: absolute;
+  right: -35%;
+  bottom: -40%;
+  width: 110vw;
+  height: 110vw;
+  background: radial-gradient(circle, rgba(255, 60, 140, 0.08), transparent 72%);
 }

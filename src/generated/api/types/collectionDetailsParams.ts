@@ -6,5 +6,5 @@
  */
 
 export type CollectionDetailsParams = {
-language?: string;
+  language?: string;
 };

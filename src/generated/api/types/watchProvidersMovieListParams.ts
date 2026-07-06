@@ -6,6 +6,6 @@
  */
 
 export type WatchProvidersMovieListParams = {
-language?: string;
-watch_region?: string;
+  language?: string;
+  watch_region?: string;
 };

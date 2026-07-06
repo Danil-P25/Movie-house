@@ -6,5 +6,5 @@
  */
 
 export type TvEpisodeCreditsParams = {
-language?: string;
+  language?: string;
 };

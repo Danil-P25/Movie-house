@@ -6,5 +6,5 @@
  */
 
 export type MovieVideosParams = {
-language?: string;
+  language?: string;
 };

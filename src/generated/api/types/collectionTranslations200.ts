@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { CollectionTranslations200TranslationsItem } from './collectionTranslations200TranslationsItem.ts';
+import type { CollectionTranslations200TranslationsItem } from "./collectionTranslations200TranslationsItem.ts";
 
 export type CollectionTranslations200 = {
   id?: number;

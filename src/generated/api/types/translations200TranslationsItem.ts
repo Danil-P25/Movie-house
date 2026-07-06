@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { Translations200TranslationsItemData } from './translations200TranslationsItemData.ts';
+import type { Translations200TranslationsItemData } from "./translations200TranslationsItemData.ts";
 
 export type Translations200TranslationsItem = {
   iso_3166_1?: string;

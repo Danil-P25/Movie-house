@@ -15,8 +15,7 @@ function Catalog() {
     error,
   } = useQuery<CatalogItem[][]>({
     queryKey: ["catalog"],
-    queryFn: () =>
-      Promise.all(CATALOG_GENRES.map((genre) => getContentByGenre(genre.id))),
+    queryFn: () => Promise.all(CATALOG_GENRES.map((genre) => getContentByGenre(genre.id))),
   });
 
   const { getGenreNames } = useGenre();

@@ -6,5 +6,5 @@
  */
 
 export type TvSeriesAggregateCreditsParams = {
-language?: string;
+  language?: string;
 };

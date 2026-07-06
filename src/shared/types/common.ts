@@ -21,7 +21,7 @@ export interface CatalogItem {
   type: "movie" | "tv";
 }
 
-export type PartialMovie = Partial<Movie>
+export type PartialMovie = Partial<Movie>;
 
 export interface ApiResponse<T> {
   page: number;

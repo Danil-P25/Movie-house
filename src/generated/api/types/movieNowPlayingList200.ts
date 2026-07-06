@@ -4,8 +4,8 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { MovieNowPlayingList200Dates } from './movieNowPlayingList200Dates.ts';
-import type { MovieNowPlayingList200ResultsItem } from './movieNowPlayingList200ResultsItem.ts';
+import type { MovieNowPlayingList200Dates } from "./movieNowPlayingList200Dates.ts";
+import type { MovieNowPlayingList200ResultsItem } from "./movieNowPlayingList200ResultsItem.ts";
 
 export type MovieNowPlayingList200 = {
   dates?: MovieNowPlayingList200Dates;

@@ -22,11 +22,7 @@ function SearchResultCard({ item, onClose }: Props) {
 
   return (
     <AppButton className={styles.card} onClick={handleClick}>
-      <img
-        className={styles.poster}
-        src={getPosterUrl(item.poster_path)}
-        alt={title}
-      />
+      <img className={styles.poster} src={getPosterUrl(item.poster_path)} alt={title} />
       <div className={styles.info}>
         <h3>{title}</h3>
         <span>

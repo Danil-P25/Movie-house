@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { TvSeriesChanges200ChangesItemItemsItemValuePoster } from './tvSeriesChanges200ChangesItemItemsItemValuePoster.ts';
+import type { TvSeriesChanges200ChangesItemItemsItemValuePoster } from "./tvSeriesChanges200ChangesItemItemsItemValuePoster.ts";
 
 export type TvSeriesChanges200ChangesItemItemsItemValue = {
   poster?: TvSeriesChanges200ChangesItemItemsItemValuePoster;

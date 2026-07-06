@@ -6,16 +6,16 @@
  */
 
 export type SearchTvParams = {
-query: string;
-/**
- * Search only the first air date. Valid values are: 1000..9999
- */
-first_air_date_year?: number;
-include_adult?: boolean;
-language?: string;
-page?: number;
-/**
- * Search the first air date and all episode air dates. Valid values are: 1000..9999
- */
-year?: number;
+  query: string;
+  /**
+   * Search only the first air date. Valid values are: 1000..9999
+   */
+  first_air_date_year?: number;
+  include_adult?: boolean;
+  language?: string;
+  page?: number;
+  /**
+   * Search the first air date and all episode air dates. Valid values are: 1000..9999
+   */
+  year?: number;
 };

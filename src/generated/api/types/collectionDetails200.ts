@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { CollectionDetails200PartsItem } from './collectionDetails200PartsItem.ts';
+import type { CollectionDetails200PartsItem } from "./collectionDetails200PartsItem.ts";
 
 export type CollectionDetails200 = {
   id?: number;

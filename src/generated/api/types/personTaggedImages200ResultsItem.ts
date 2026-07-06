@@ -4,7 +4,7 @@
  * tmdb-api
  * OpenAPI spec version: 3
  */
-import type { PersonTaggedImages200ResultsItemMedia } from './personTaggedImages200ResultsItemMedia.ts';
+import type { PersonTaggedImages200ResultsItemMedia } from "./personTaggedImages200ResultsItemMedia.ts";
 
 export type PersonTaggedImages200ResultsItem = {
   aspect_ratio?: number;
