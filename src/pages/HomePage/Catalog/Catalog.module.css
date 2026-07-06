@@ -21,6 +21,7 @@
   width: 120vw;
   height: 120vw;
   background: radial-gradient(circle, rgba(82, 64, 255, 0.1), transparent 70%);
+  pointer-events: none;
 }
 
 .catalog::after {

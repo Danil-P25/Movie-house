@@ -19,10 +19,6 @@ export default defineConfig({
         manualChunks(id) {
           if (!id.includes("node_modules")) return;
 
-          if (id.includes("react-dom") || id.includes("react")) {
-            return "react";
-          }
-
           if (id.includes("react-router-dom")) {
             return "router";
           }
@@ -31,16 +27,25 @@ export default defineConfig({
             return "query";
           }
 
-          if (id.includes("date-fns")) {
-            return "date";
-          }
-
           if (id.includes("react-markdown")) {
             return "markdown";
           }
 
+          if (id.includes("date-fns")) {
+            return "date";
+          }
+
           if (id.includes("swiper")) {
             return "swiper";
+          }
+
+          if (
+            id.includes("/react/") ||
+            id.includes("\\react\\") ||
+            id.includes("/react-dom/") ||
+            id.includes("\\react-dom\\")
+          ) {
+            return "react";
           }
         },
       },

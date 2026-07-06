@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import AboutMovie from "./AboutMovie/AboutMovie";
-import RelatedMovies from "./RelatedMovies/RelatedMovies";
 import MediaHero from "./MediaHero/MediaHero";
 import { useMediaDetails } from "@/hooks/useMediaDetails/useMediaDetails";
 import styles from "./MediaPage.module.css";
@@ -30,7 +29,6 @@ function MediaPage() {
     <div className={styles.mediaPage}>
       <MediaHero data={data} />
       <AboutMovie data={data} credits={credits} />
-      <RelatedMovies movieId={id} type={type} />
     </div>
   );
 }
