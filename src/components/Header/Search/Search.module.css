@@ -1,0 +1,21 @@
+.buttonSearch {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.buttonSearch:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  transform: scale(1.02);
+}
+
+.buttonSearch:hover svg {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+}

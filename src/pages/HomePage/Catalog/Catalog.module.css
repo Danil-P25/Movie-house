@@ -1,0 +1,35 @@
+.catalog {
+  margin-top: 100px;
+  position: relative;
+  margin-inline: clamp(30px, 5.6vw, 90px);
+}
+
+.titleCatalog {
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0 0 60px 0;
+  text-shadow:
+    0 0 10px #7c7c7c,
+    0 0 20px #6f6868;
+}
+
+.catalog::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -30%;
+  width: 120vw;
+  height: 120vw;
+  background: radial-gradient(circle, rgba(82, 64, 255, 0.1), transparent 70%);
+  pointer-events: none;
+}
+
+.catalog::after {
+  content: "";
+  position: absolute;
+  right: -35%;
+  bottom: -40%;
+  width: 110vw;
+  height: 110vw;
+  background: radial-gradient(circle, rgba(255, 60, 140, 0.08), transparent 72%);
+}
